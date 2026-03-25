@@ -1,0 +1,38 @@
+{% extends "app/base.html" %}
+
+{% block title %}
+コメント投稿
+{% endblock %}
+
+{% block main %}
+<div>
+  {% if user.is_authenticated %}
+  <!-- <div>動画一覧</div> -->
+  {% for video in videos %}
+    <div class="m-5">
+      <a
+        href="{% url 'video' video.pk %}"
+      >
+      {{ video.title }}</a> {{ video.uploaded_at }}
+    <div class="row">
+      <div class="col-3 p-2">
+        <img src="{{ video.image.url }}" width="200">
+      </div>
+      <!-- <div>{{ video.file }}</div> -->
+      <div class="col-5">
+        <!-- width="500"  -->
+        <video height="240" controls>
+          <source src="{{ video.file.url }}" type="video/mp4">
+        </video>
+      </div>  
+      <div class="col-4">
+        {{ video.text|linebreaksbr }}
+      </div>
+    </div>
+    </div>
+  {% endfor %}
+  {% else %}
+    <div>工事中</div>
+  {% endif %}
+</div>
+{% endblock %}
