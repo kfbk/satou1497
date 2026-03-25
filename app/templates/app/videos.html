@@ -10,13 +10,17 @@
   <!-- <div>動画一覧</div> -->
   {% for video in videos %}
     <div class="m-5">
+      {% comment %}
       <a
         href="{% url 'video' video.pk %}"
-      >
-      {{ video.title }}</a> {{ video.uploaded_at }}
+      ></a>
+      {% endcomment %}
+      {{ video.title }} {{ video.uploaded_at }}
     <div class="row">
       <div class="col-3 p-2">
+        {% if video.image %}
         <img src="{{ video.image.url }}" width="200">
+        {% endif %}
       </div>
       <!-- <div>{{ video.file }}</div> -->
       <div class="col-5">

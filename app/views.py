@@ -14,11 +14,11 @@ def videos_view(request):
   }
   return render(request, 'app/videos.html', context)
 
-@login_required
-def video_view(request, pk):
-  video = get_object_or_404(Video, id=pk)
-  # print(f'video = {video.file}')
-  context = {
-    'video' : video,
-  }
-  return render(request, 'app/video.html', context)
+# @login_required
+# def video_view(request, pk):
+#   video = get_object_or_404(Video, id=pk)
+#   # print(f'video = {video.file}')
+#   context = {
+#     'video' : video,
+#   }
+#   return render(request, 'app/video.html', context)
