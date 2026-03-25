@@ -11,7 +11,7 @@ env/
 db.sqlite3
 
 # Media and static files (if served locally and not part of the source control)
-#media/
+media/
 #static_collected/
 
 # Log files
