@@ -17,19 +17,19 @@
       {% endcomment %}
       {{ video.title }} {{ video.uploaded_at }}
     <div class="row">
-      <div class="col-3 p-2">
+      <div class="col-md-3 p-2">
         {% if video.image %}
         <img src="{{ video.image.url }}" width="200">
         {% endif %}
       </div>
       <!-- <div>{{ video.file }}</div> -->
-      <div class="col-5">
+      <div class="col-md-5">
         <!-- width="500"  -->
         <video height="240" controls>
           <source src="{{ video.file.url }}" type="video/mp4">
         </video>
       </div>  
-      <p class="p-2 col-4">
+      <p class="p-2 col-md-4">
         {{ video.text|linebreaksbr }}
       </p>
     </div>
