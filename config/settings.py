@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-p$sj=jo*az)_wm7&l*-rwh(-ptu_bvmhordsjk@fm*7r#=20)9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['video2.pythonanywhere.com']
+# ALLOWED_HOSTS = ['video2.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
